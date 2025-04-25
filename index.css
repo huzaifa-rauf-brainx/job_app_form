@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif
+}
+.main-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.sub-heading_personal {
+    color: maroon;
+    margin-left: 1.5%;
+    margin-bottom: 3%;
+    font-size: 22px;
+}
+.first_name {
+    color: gray;
+    font-size: 9px; 
+    margin-left: 36%;
+}
+.last_name {
+    color: gray; 
+    font-size: 9px; 
+    margin-left: 19%;
+}
+.edu_list {
+    width: 40%; 
+    cursor: pointer;
+}
+.address {
+    color: gray;
+    font-size: 10px;
+    margin-left: 60%;
+}
+.country_list {
+    width: 50%; 
+    cursor: pointer;
+}
+#hobby {
+    margin-top: 3px;
+    margin-left: 1.5%;
+    width: 90%;
+}
+.sub-heading_additional_info {
+    color: maroon;
+    margin-left: 1.5%;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.comp_name {
+    margin-top: 4%;
+}
+label {
+    display: inline-block;
+    width: 180px;
+    margin-left: 1.5%;
+}
+input::-webkit-calendar-picker-indicator {
+      opacity: 100;
+}
+form {
+    border: 2px solid whitesmoke; 
+    width: 90%; 
+    border-top: 20px solid maroon; 
+    max-width: 580px; 
+    box-sizing: border-box;
+}
+.submit_button {
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-bottom: 2%;
+    width: 20%;
+    padding: 8px 10px;
+}
+.submit_button:hover {
+    background-color: green;
+    transition: 0.5s;
+}
+.button_class {
+   display: inline;
+   margin-left: 40%;
+}
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    label {
+    display: inline-block;
+    width: 90px;
+    margin-left: 1.5%;
+}
+}
