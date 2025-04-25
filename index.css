@@ -18,12 +18,12 @@ body {
 .first_name {
     color: gray;
     font-size: 9px; 
-    margin-left: 36%;
+    margin-left: 34%;
 }
 .last_name {
     color: gray; 
     font-size: 9px; 
-    margin-left: 19%;
+    margin-left: 18%;
 }
 .edu_list {
     width: 40%; 
@@ -51,6 +51,21 @@ body {
 }
 .comp_name {
     margin-top: 4%;
+}
+.city_span {
+    color: gray;
+    font-size: 10px;
+    margin-left: 45%;
+}
+.state_span {
+    color: gray;
+    font-size: 10px;
+    margin-left: 14%;
+}
+.zip_span {
+    color: gray;
+    font-size: 10px;
+    margin-left: 4%;
 }
 label {
     display: inline-block;
@@ -90,8 +105,38 @@ form {
         flex-direction: column;
     }
     label {
-    display: inline-block;
-    width: 90px;
-    margin-left: 1.5%;
-}
+        display: inline-block;
+        width: 90px;
+        margin-left: 1.5%;
+    }
+    .first_name {
+        color: gray;
+        font-size: 9px; 
+        margin-left: 21.3%;
+    }
+    .last_name {
+        color: gray; 
+        font-size: 9px; 
+        margin-left: 22%;
+    }
+    .address {
+        color: gray;
+        font-size: 10px;
+        margin-left: 50%;
+    }
+    .city_span {
+        color: gray;
+        font-size: 10px;
+        margin-left: 35%;
+    }
+    .state_span {
+        color: gray;
+        font-size: 10px;
+        margin-left: 13%;
+    }
+    .zip_span {
+        color: gray;
+        font-size: 10px;
+        margin-left: 5%;
+    }
 }
