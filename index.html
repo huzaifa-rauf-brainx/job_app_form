@@ -18,11 +18,11 @@
                     <label class="form_label" for="fullname">Name</label>
                     <div class="name_input">
                         <input type="text" name="fname" id="first_name" required>
-                        <label class="form_label" for="first_name" class="first_name"><small>First name</small></label>
+                        <label class="form_label first_name" for="first_name"><small>First name</small></label>
                     </div>
                     <div class="name_input">
                         <input type="text" name="lname" id="last_name" required>
-                        <label class="form_label" for="last_name" class="last_name"><small>Last name</small></label>
+                        <label class="form_label last_name" for="last_name"><small>Last name</small></label>
                     </div>
                 </div>
                 
@@ -32,9 +32,9 @@
                 </div>
             
             <section class="edu_list">
-                <label class="form_label" for="education" class="education">Education</label>
+                <label class="form_label education" for="education">Education</label>
                 <div class="custom_arrow_input edu_list_input">
-                    <select required>
+                    <select id="education" name="education" required>
                         <option selected> Please Choose</option>
                         <option>Matric </option>
                         <option>Fsc </option>
@@ -52,7 +52,7 @@
             <div class="address_details">
                 <label class="form_label" for="address">Address</label>
                 <div class="address_input">
-                    <input type="text" name="address1" id="address1" size="45" required autocomplete="on">
+                    <input type="text" name="address1" id="address" size="45" required autocomplete="on">
                     <span class="muted_text">Address 1</span>
                     <input type="text" name="address2" id="address2" size="45" required autocomplete="on">
                     <span class="muted_text">Address 2</span>
@@ -97,14 +97,13 @@
             <div class="hobbies_details">
                 <label class="form_label" for="hobby">What are your hobbies?</label>
                 <textarea name="hobby" id="hobby" rows="1" required></textarea>
-               
             </div>
         </fieldset>
             
             <fieldset class="previous_emp_details">
                     <h3 class="sub-heading_additional_info">Precious/Current Employment Details</h3>
                     <div class="emp_detail">
-                        <label class="form_label" for="company_name" class="comp_name">Company Name</label>
+                        <label class="form_label comp_name" for="company_name">Company Name</label>
                         <input type="text" name="company_name" id="company_name" size="45">
                     </div>
 
