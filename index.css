@@ -143,13 +143,17 @@ form {
     display: none;
   }
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
     body {
         flex-direction: column;
+        align-items: center;
     }
     label {
         display: inline-block;
         width: 90px;
+    }
+    input {
+        width: 30%;
     }
     .first_name {
         color: gray;
@@ -159,7 +163,7 @@ form {
     .last_name {
         color: gray; 
         font-size: 9px; 
-        margin-left: 97px;
+        margin-left: 30%;
     }
     #address2 {
         margin-left: 95px;
@@ -173,21 +177,21 @@ form {
     .address {
         color: gray;
         font-size: 10px;
-        margin-left: 220px;
+        margin-left: 30%;
     }
     .city_span {
         color: gray;
         font-size: 10px;
-        margin-left: 80px;
+        margin-left: 10%;
     }
     .state_span {
         color: gray;
         font-size: 10px;
-        margin-left: 65px;
+        margin-left: 24%;
     }
     .zip_span {
         color: gray;
         font-size: 10px;
-        margin-left: 15px;
+        margin-left: 22%;
     }
 }
