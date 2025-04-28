@@ -143,43 +143,51 @@ form {
     display: none;
   }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     body {
         flex-direction: column;
     }
     label {
         display: inline-block;
         width: 90px;
-        margin-left: 1.5%;
     }
     .first_name {
         color: gray;
         font-size: 9px; 
-        margin-left: 21.3%;
+        margin-left: 95px;
     }
     .last_name {
         color: gray; 
         font-size: 9px; 
-        margin-left: 22%;
+        margin-left: 97px;
+    }
+    #address2 {
+        margin-left: 95px;
+    }
+    .country_list {
+        margin-left: 95px;
+    }
+    .city_details {
+        margin-left: 95px;
     }
     .address {
         color: gray;
         font-size: 10px;
-        margin-left: 50%;
+        margin-left: 220px;
     }
     .city_span {
         color: gray;
         font-size: 10px;
-        margin-left: 35%;
+        margin-left: 80px;
     }
     .state_span {
         color: gray;
         font-size: 10px;
-        margin-left: 13%;
+        margin-left: 65px;
     }
     .zip_span {
         color: gray;
         font-size: 10px;
-        margin-left: 5%;
+        margin-left: 15px;
     }
 }
