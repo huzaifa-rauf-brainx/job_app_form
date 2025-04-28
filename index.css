@@ -4,6 +4,8 @@ body {
     justify-content: center;
 }
 .main-heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     margin-top: 5px;
@@ -11,43 +13,48 @@ body {
 }
 .sub-heading_personal {
     color: maroon;
-    margin-left: 1.5%;
     margin-bottom: 3%;
     font-size: 22px;
 }
 .first_name {
     color: gray;
     font-size: 9px; 
-    margin-left: 34%;
+    margin-left: 33%;
+    width: 50px;
 }
 .last_name {
     color: gray; 
     font-size: 9px; 
-    margin-left: 18%;
+    margin-left: 17%;
 }
 .edu_list {
-    width: 40%; 
-    cursor: pointer;
+    display: flex;
+}
+.edu_list_input {
+    width: 30%;
+    margin-left: 1%;
 }
 .address {
     color: gray;
     font-size: 10px;
-    margin-left: 60%;
+    margin-left: 56%;
+}
+#address2 {
+    margin-left: 32.8%;
 }
 .country_list {
+    margin-left: 32.8%;
     width: 50%; 
     cursor: pointer;
 }
 #hobby {
     margin-top: 3px;
-    margin-left: 1.5%;
     width: 90%;
 }
 .sub-heading_additional_info {
-    color: maroon;
-    margin-left: 1.5%;
+    color: brown;
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 24px;
 }
 .comp_name {
     margin-top: 4%;
@@ -55,30 +62,39 @@ body {
 .city_span {
     color: gray;
     font-size: 10px;
-    margin-left: 45%;
+    margin-left: 22%;
+}
+.city_details {
+    margin-left: 32.8%;
 }
 .state_span {
     color: gray;
     font-size: 10px;
-    margin-left: 14%;
+    margin-left: 16%;
+}
+#zipcode {
+    width: 20%;
 }
 .zip_span {
     color: gray;
     font-size: 10px;
-    margin-left: 4%;
+    margin-left: 5%;
 }
 label {
     display: inline-block;
     width: 180px;
-    margin-left: 1.5%;
+}
+fieldset {
+    border: none;
+    padding: 5px;
 }
 input::-webkit-calendar-picker-indicator {
       opacity: 100;
 }
 form {
-    border: 2px solid whitesmoke; 
+    border-top: 20px solid maroon;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
     width: 90%; 
-    border-top: 20px solid maroon; 
     max-width: 580px; 
     box-sizing: border-box;
 }
@@ -93,13 +109,40 @@ form {
     padding: 8px 10px;
 }
 .submit_button:hover {
-    background-color: green;
-    transition: 0.5s;
+    cursor: pointer;
 }
 .button_class {
    display: inline;
    margin-left: 40%;
 }
+
+.custom_arrow_input {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .custom_arrow_input:after {
+    content: "▼";
+    font-size: 0.8rem;
+    pointer-events: none;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+    z-index: 1;
+  }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+
 @media (max-width: 600px) {
     body {
         flex-direction: column;

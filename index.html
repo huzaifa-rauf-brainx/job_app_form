@@ -7,38 +7,41 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form method="post" onsubmit="myFunction()">
+    <form method="post" onsubmit="myFunction()" action="/action_page.php">
             <div class="main_headings">
                 <h1 class="main-heading">Job Application</h1>
+            </div>
+            
+        <fieldset>
                 <h3 class="sub-heading_personal">Personal Information</h3>
-            </div>
 
-            <div class="personal_details">
-                <label for="fullname">Name</label>
-                <input type="text" name="fname" id="fname" required placeholder="First name">
-                <input type="text" name="lname" id="lname" required placeholder="Last name"><br>
-                <span class="first_name">First Name</span>
-                <span class="last_name">Last Name</span>
-                <br><br>
-            </div>
-
-            <div class="email_details">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" size="40" placeholder="user@example.com" required>
-                <br><br>
-            </div>
-
-            <div class="education_details">
+                <div class="personal_details">
+                    <label for="fullname">Name</label>
+                    <input type="text" name="fname" id="first_name" required placeholder="First name">
+                    <input type="text" name="lname" id="last_name" required placeholder="Last name"><br>
+                    <label for="first_name" class="first_name"><small>First name</small></label>
+                    <label for="last_name" class="last_name"><small>Last name</small></label>
+                    <br><br>
+                </div>
+                
+                <div class="email_details">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" size="40" placeholder="user@example.com" required autocomplete="on">
+                    <br><br>
+                </div>
+            
+            <section class="edu_list">
                 <label for="education" class="education">Education</label>
-                <input list="education" value="Please Choose" class="edu_list" required>
-                <datalist id="education" name="education">
-                    <option value="Please Choose">
-                    <option value="Matric">
-                    <option value="Fsc">
-                    <option value="Bachleros">
-                    <option value="PhD">
-                </datalist><br><br>
-            </div>
+                <div class="custom_arrow_input edu_list_input">
+                    <select required>
+                        <option selected> Please Choose</option>
+                        <option>Matric </option>
+                        <option>Fsc </option>
+                        <option>Bachleros</option>
+                        <option>PhD</option>
+                    </select><br><br>
+                </div>
+            </section>
 
             <div class="resume_details">
                 <label for="resume">Resume</label>
@@ -47,30 +50,26 @@
                 
             <div class="address_details">
                 <label for="address">Address</label>
-                <input type="text" name="address" id="address1" size="45" required>
-                <span class="address">Address 1</span><br>
-                <label for=""></label>
-                <input type="text" name="address" id="address2" size="45" required>
-                <span class="address">Address 2</span><br>
+                <input type="text" name="address1" id="address1" size="45" required autocomplete="on">
+                    <span class="address">Address 1</span><br>
+                    <input type="text" name="address2" id="address2" size="45" required autocomplete="on">
+                    <span class="address">Address 2</span><br>
             </div>
 
-            <div class="country_details">
-                <label></label>
-                <input list="country" value="Select a Country" class="country_list" required>
-                <datalist id="country" name="country">
-                    <option value="Select a Country">
-                    <option value="Pakistan">
-                    <option value="USA">
-                    <option value="Austria">
-                    <option value="Canada">
-                </datalist><br><br>
+            <div class="custom_arrow_input country_list">
+                <select id="country" name="country" required>
+                    <option selected>Select a Country</option>
+                        <option>Pakistan</option>
+                        <option>Canada</option>
+                        <option>Austria</option>
+                        <option>USA</option>
+                </select><br><br>
             </div>
 
             <div class="city_details">
-                <label></label>
                 <input type="text" name="city" id="city" size="22" required>
-                <input type="text" name="state" id="state" size="4" maxlength="3" required>
-                <input type="text" name="zipcode" id="zipcode" size="9" maxlength="5" required>
+                <input type="text" name="state" id="state" size="4" required>
+                <input type="number" name="zipcode" id="zipcode" minlength="5" maxlength="5" required>
                 <span class="city_span">City</span>
                 <span class="state_span">State</span>
                 <span class="zip_span">Zip Code</span>
@@ -89,37 +88,46 @@
                 <textarea name="hobby" id="hobby" rows="1" required placeholder="describe your hobbies"></textarea>
                 <br><br>
             </div>
-
-            <div class="prev_emp_details">
-                <h2 class="sub-heading_additional_info">Previous/Current Employment Details</h2>
-                <label for="company_name" class="comp_name">Company Name</label>
-                <input type="text" name="company_name" id="company_name" size="45" placeholder="Company name">
-                <br><br>
-                <label for="job_title">Job Title</label>
-                <input type="text" name="job_title" id="job_title" size="45" placeholder="Job title">
-                <br><br>
-                <label for="job_duration">How long were you</label>
-                <input type="text" name="job_duration" id="job_duration" size="45" placeholder="Job duration"><br>
-                <span style="margin-left: 8px;">here?</span>
-                <br><br>
-            </div>
+        </fieldset>
             
-            <div class="reference_no_1">
-                <h2 class="sub-heading_additional_info">Reference #1</h2>
-                <label for="ref_name_1">Name</label>
-                <input type="text" name="ref_name_1" id="ref_name_1" size="45" placeholder="Full name"><br><br>
-                <label for="ref_contact_1">Phone</label>
-                <input type="text" name="ref_contact_1" id="ref_contact_1" size="45" placeholder="Contact number">
-            </div>
+            <fieldset>
+                <div class="prev_emp_details">
+                    <h3 class="sub-heading_additional_info">Precious/Current Employment Details</h3>
+                    <label for="company_name" class="comp_name">Company Name</label>
+                    <input type="text" name="company_name" id="company_name" size="45" placeholder="Company name">
+                    <br><br>
+                    <label for="job_title">Job Title</label>
+                    <input type="text" name="job_title" id="job_title" size="45" placeholder="Job title">
+                    <br><br>
+                    <label for="job_duration">How long were you</label>
+                    <input type="text" name="job_duration" id="job_duration" size="45" placeholder="Job duration"><br>
+                    <span>here?</span>
+                    <br><br>
+                </div>
+            </fieldset>
+            
+            <fieldset>
 
-            <div class="reference_no_2">
-                <br><br>
-                <h2 class="sub-heading_additional_info">Reference #2</h2>
-                <label for="ref_name_2">Name</label>
-                <input type="text" name="ref_name_2" id="ref_name_2" size="45" placeholder="Full name"><br><br>
-                <label for="ref_contact_2">Phone</label>
-                <input type="text" name="ref_contact_2" id="ref_contact_2" size="45" placeholder="Contact number"><br><br>
-            </div>
+                <div class="reference_no_1">
+                    <h2 class="sub-heading_additional_info">Reference #1</h2>
+                    <label for="ref_name_1">Name</label>
+                    <input type="text" name="ref_name_1" id="ref_name_1" size="45" placeholder="Full name"><br><br>
+                    <label for="ref_contact_1">Phone</label>
+                    <input type="text" name="ref_contact_1" id="ref_contact_1" size="45" placeholder="Contact number">
+                </div>
+            </fieldset>
+
+            <fieldset>
+
+                <div class="reference_no_2">
+                    <br><br>
+                    <h2 class="sub-heading_additional_info">Reference #2</h2>
+                    <label for="ref_name_2">Name</label>
+                    <input type="text" name="ref_name_2" id="ref_name_2" size="45" placeholder="Full name"><br><br>
+                    <label for="ref_contact_2">Phone</label>
+                    <input type="text" name="ref_contact_2" id="ref_contact_2" size="45" placeholder="Contact number"><br><br>
+                </div>
+            </fieldset>
                 
             <div class="button_class">
                 <button type="submit" class="submit_button">Apply</button>
