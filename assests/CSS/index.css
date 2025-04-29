@@ -1,4 +1,4 @@
-.body {
+.page_body {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     width: 100%;
     max-width: 30%;
 }
-.name_details .first_name, .last_name {
+.name_details .first_name, .name_details .last_name {
     color: gray;
     font-size: 9px; 
 }
@@ -44,7 +44,11 @@
 }
 .personal_details .edu_list_input {
     width: 100%;
-    max-width: 30%;
+    max-width: 40%;
+}
+.edu_list .select_label, .country_list .select_label {
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 4px;
 }
 .personal_details .resume_details {
     margin-bottom: 15px;
@@ -56,7 +60,6 @@
 .address_details .address_input {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .address_details .city_span {
     text-align: center;
@@ -64,6 +67,7 @@
 .address_details .muted_text {
     color: gray;
     font-size: 10px;
+    text-align: center;
 }
 .address_details .country_list {
     display: flex;
@@ -71,13 +75,22 @@
     align-items: center;
     cursor: pointer;
     width:100%;
+    max-width: 95%;
 }
 .address_details .city_input {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 90%;
     gap: 5px;
     margin-bottom: 15px;
+}
+.resume_details .resume_inp {
+    border: 1px solid rgb(118, 118, 118);
+    padding: 2px 5px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
 }
 .city_input .city_details {
     display: flex;
@@ -102,7 +115,7 @@
     margin-bottom: 15px;
 }
 
-.personal_details #hobby {
+.personal_details .hobby_inp {
     margin-top: 3px;
     width: 100%;
     max-width: 90%;
@@ -112,8 +125,8 @@
 .sub-heading_additional_info {
     color: #A52A2A;
     margin-top: 0px;
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 .previous_emp_details .comp_name {
@@ -131,7 +144,7 @@
     width: 180px;
 }
 
-#first_name, #last_name, #email, #address, #address2, #city, #state, #zipcode, #country_code, #phone_number, #company_name, #job_title, #job_duration, #ref_name_1, #ref_contact_1, #ref_name_2, #ref_contact_2 {
+.form_input {
     outline: none;
 }
 
@@ -152,7 +165,12 @@ input::-webkit-calendar-picker-indicator {
     box-sizing: border-box;
 }
 
-.submit_button {
+.form .button_class {
+    display: flex;
+    justify-content: center;
+ }
+
+.button_class .submit_button {
     background-color: #800000;
     color: #FFFFFF;
     border: none;
@@ -167,12 +185,9 @@ input::-webkit-calendar-picker-indicator {
 .submit_button:hover {
     cursor: pointer;
 }
-.button_class {
-   display: flex;
-   justify-content: center;
-}
 
-.custom_arrow_input {
+
+.edu_list .custom_arrow_input, .address_details .custom_arrow_input {
     position: relative;
   }
   
@@ -201,7 +216,7 @@ input::-webkit-calendar-picker-indicator {
   }
 
 @media (max-width: 767px) {
-    .body {
+    .page_body {
         flex-direction: column;
         align-items: center;
     }
