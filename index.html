@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
-    <link rel="stylesheet" href="assests/CSS/index.css">
+    <link rel="stylesheet" href="assets/CSS/index.css">
 </head>
 <body class="page_body">
     <form class="form" method="post" onsubmit="myFunction()" action="/action_page.php">
-            <div class="headings">
-                <h1 class="main-heading">Job Application</h1>
-            </div>
-            
+        <div class="headings">
+            <h1 class="main-heading">Job Application</h1>
+        </div>
+
         <fieldset class="personal_details">
-                <h3 class="sub-heading_personal">Personal Information</h3>
-                <div class="name_details">
-                    <label class="form_label" for="fullname">Name</label>
-                    <div class="name_input">
-                        <input class="form_input" type="text" name="fname" id="first_name" required>
-                        <label class="form_label first_name" for="first_name"><small>First name</small></label>
-                    </div>
-                    <div class="name_input">
-                        <input class="form_input" type="text" name="lname" id="last_name" required>
-                        <label class="form_label last_name" for="last_name"><small>Last name</small></label>
-                    </div>
+            <h3 class="sub-heading_personal">Personal Information</h3>
+            <div class="name_details">
+                <label class="form_label" for="fullname">Name</label>
+                <div class="name_input">
+                    <input class="form_input" type="text" name="fname" id="first_name" required>
+                    <label class="form_label first_name" for="first_name"><small>First name</small></label>
                 </div>
-                
-                <div class="email_details">
-                    <label class="form_label" for="email">Email</label>
-                    <input class="form_input" type="email" name="email" id="email" size="40" placeholder="user@example.com" required autocomplete="on">
+                <div class="name_input">
+                    <input class="form_input" type="text" name="lname" id="last_name" required>
+                    <label class="form_label last_name" for="last_name"><small>Last name</small></label>
                 </div>
-            
+            </div>
+            <div class="email_details">
+                <label class="form_label" for="email">Email</label>
+                <input class="form_input" type="email" name="email" id="email" size="40" placeholder="user@example.com"
+                    required autocomplete="on">
+            </div>
             <section class="edu_list">
                 <label class="form_label education" for="education">Education</label>
                 <div class="custom_arrow_input edu_list_input">
@@ -43,21 +42,21 @@
                     </select>
                 </div>
             </section>
-
             <div class="resume_details">
                 <label class="form_label" for="resume">Resume</label>
                 <input class="resume_inp" type="file" id="resume" name="resume" accept=".pdf" required>
             </div>
-
             <div class="address_details">
                 <label class="form_label" for="address">Address</label>
                 <div class="address_input">
-                    
-                    <input class="form_input" type="text" name="address1" id="address" size="45" required autocomplete="on">
-                    <span class="muted_text">Address 1</span>
-                    <input class="form_input" type="text" name="address2" id="address2" size="45" required autocomplete="on">
-                    <span class="muted_text">Address 2</span>
-                    
+                    <div class="user_address">
+                        <input class="form_input" type="text" name="address1" id="address" size="45" required
+                            autocomplete="on">
+                        <span class="muted_text">Address 1</span>
+                        <input class="form_input" type="text" name="address2" id="address2" size="45" required
+                            autocomplete="on">
+                        <span class="muted_text">Address 2</span>
+                    </div>
                     <div class="custom_arrow_input country_list">
                         <select class="select_label" id="country" name="country" required>
                             <option selected>Select a Country</option>
@@ -68,7 +67,6 @@
                         </select>
                         <span class="muted_text">Country</span>
                     </div>
-
                     <div class="city_input">
                         <div class="city_details">
                             <input class="form_input" type="text" name="city" id="city" required>
@@ -79,76 +77,74 @@
                             <span class="muted_text">State</span>
                         </div>
                         <div class="zipcode_details">
-                            <input class="form_input" type="text" name="zipcode" id="zipcode" size="5" minlength="5" maxlength="5" required>
+                            <input class="form_input" type="text" name="zipcode" id="zipcode" size="5" minlength="5"
+                                maxlength="5" required>
                             <span class="muted_text">Zip Code</span>
                         </div>
                     </div>
 
                 </div>
             </div>
-
             <div class="phone_number_details">
                 <label class="form_label" for="country_code">Phone Number</label>
-                <input class="form_input" type="tel" name="country_code" id="country_code" size="4" maxlength="3" required>
-                <input class="form_input" type="tel" name="phone_number" id="phone_number" size="38" required>
-                
+                <div class="phn_num_inp">
+                    <input class="form_input ph_inp_1" type="tel" name="country_code" id="country_code" size="4"
+                        maxlength="3" required>
+                    <input class="form_input ph_inp_2" type="tel" name="phone_number" id="phone_number" size="38"
+                        required>
+                </div>
             </div>
-
             <div class="hobbies_details">
                 <label class="form_label" for="hobby">What are your hobbies?</label>
                 <textarea class="hobby_inp" name="hobby" id="hobby" rows="1" cols="10" required></textarea>
             </div>
         </fieldset>
-            
-            <fieldset class="previous_emp_details">
-                    <h3 class="sub-heading_additional_info">Precious/Current Employment Details</h3>
-                    <div class="emp_detail">
-                        <label class="form_label comp_name" for="company_name">Company Name</label>
-                        <input class="form_input" type="text" name="company_name" id="company_name" size="45">
-                    </div>
 
-                    <div class="emp_detail">
-                        <label class="form_label" for="job_title">Job Title</label>
-                        <input class="form_input" type="text" name="job_title" id="job_title" size="45">
-                    </div>
-
-                    <div class="emp_detail">
-                        <label class="form_label" for="job_duration">How long were you here?</label>
-                        <input class="form_input" type="text" name="job_duration" id="job_duration" size="45">
-                    </div>
-            </fieldset>
-            
-            <fieldset class="references">
-                <h2 class="sub-heading_additional_info">Reference #1</h2>
-                <div class="ref_details">
-                    <label class="form_label" for="ref_name_1">Name</label>
-                    <input class="form_input" type="text" name="ref_name_1" id="ref_name_1" size="45">
-                </div>
-                <div class="ref_details">
-                    <label class="form_label" for="ref_contact_1">Phone</label>
-                    <input class="form_input" type="text" name="ref_contact_1" id="ref_contact_1" size="45">
-                </div>
-
-                <h2 class="sub-heading_additional_info">Reference #2</h2>
-
-                <div class="ref_details">
-                    <label class="form_label" for="ref_name_2">Name</label>
-                    <input class="form_input" type="text" name="ref_name_2" id="ref_name_2" size="45">
-                </div>
-                <div class="ref_details">
-                    <label class="form_label" for="ref_contact_2">Phone</label>
-                    <input class="form_input" type="text" name="ref_contact_2" id="ref_contact_2" size="45">
-                </div>
-            </fieldset>
-                
-            <div class="button_class">
-                <button type="submit" class="submit_button">Apply</button>
+        <fieldset class="previous_emp_details">
+            <h3 class="sub-heading_additional_info">Precious/Current Employment Details</h3>
+            <div class="emp_detail">
+                <label class="form_label comp_name" for="company_name">Company Name</label>
+                <input class="form_input" type="text" name="company_name" id="company_name" size="45">
             </div>
+            <div class="emp_detail">
+                <label class="form_label" for="job_title">Job Title</label>
+                <input class="form_input" type="text" name="job_title" id="job_title" size="45">
+            </div>
+            <div class="emp_detail">
+                <label class="form_label" for="job_duration">How long were you here?</label>
+                <input class="form_input" type="text" name="job_duration" id="job_duration" size="45">
+            </div>
+        </fieldset>
+
+        <fieldset class="references">
+            <h2 class="sub-heading_additional_info">Reference #1</h2>
+            <div class="ref_details">
+                <label class="form_label" for="ref_name_1">Name</label>
+                <input class="form_input" type="text" name="ref_name_1" id="ref_name_1" size="45">
+            </div>
+            <div class="ref_details">
+                <label class="form_label" for="ref_contact_1">Phone</label>
+                <input class="form_input" type="text" name="ref_contact_1" id="ref_contact_1" size="45">
+            </div>
+            <h2 class="sub-heading_additional_info">Reference #2</h2>
+            <div class="ref_details">
+                <label class="form_label" for="ref_name_2">Name</label>
+                <input class="form_input" type="text" name="ref_name_2" id="ref_name_2" size="45">
+            </div>
+            <div class="ref_details">
+                <label class="form_label" for="ref_contact_2">Phone</label>
+                <input class="form_input" type="text" name="ref_contact_2" id="ref_contact_2" size="45">
+            </div>
+        </fieldset>
+
+        <div class="button_class">
+            <button type="submit" class="submit_button">Apply</button>
+        </div>
     </form>
 
     <script>
         function myFunction() {
-          alert("Application submitted");
+            alert("Application submitted");
         }
     </script>
 </body>
