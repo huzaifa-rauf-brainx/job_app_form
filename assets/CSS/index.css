@@ -1,3 +1,7 @@
+:root {
+    --heading_maroon: #A52A2A;
+    --gray: gray;
+}
 .page_body {
     font-family: sans-serif;
     display: flex;
@@ -22,11 +26,11 @@
     max-width: 30%;
 }
 .name_details .first_name, .name_details .last_name {
-    color: gray;
+    color: var(--gray);
     font-size: 9px; 
 }
 .personal_details .sub-heading_personal {
-    color: #800000;
+    color: var(--heading_maroon);
     margin-bottom: 3%;
     font-size: 22px;
 }
@@ -66,7 +70,7 @@
     text-align: center;
 }
 .address_details .muted_text {
-    color: gray;
+    color: var(--gray);
     font-size: 10px;
     text-align: center;
 }
@@ -117,25 +121,23 @@
     margin-bottom: 15px;
 }
 
-.personal_details .hobby_inp {
+.personal_details .customer--input--field {
     margin-top: 3px;
     width: 100%;
     max-width: 500px;
     max-height: 20px;
-    min-width: 500px;
-    min-height: 20px;
     outline: none;
 }
-.previous_emp_details .sub-heading_additional_info, .references .sub-heading_additional_info {
-    color: #A52A2A;
+.customer--previous--employee .sub-heading_additional_info, .references .sub-heading_additional_info {
+    color: var(--heading_maroon);
     margin-top: 0px;
     font-weight: 500;
     font-size: 22px;
 }
-.previous_emp_details .comp_name {
+.customer--previous--employee .comp_name {
     margin-top: 10px;
 }
-.previous_emp_details .emp_detail {
+.customer--previous--employee .customer--employee--detail {
     margin-bottom: 15px;
 }
 .references .ref_details {
@@ -148,7 +150,7 @@
 .form_input {
     outline: none;
 }
-.personal_details, .previous_emp_details, .references {
+.personal_details, .customer--previous--employee, .references {
     border: none;
     padding: 5px;
 }
@@ -213,10 +215,10 @@ input::-webkit-calendar-picker-indicator {
         margin: 10px;
     }
     .headings .main-heading {
-        font-size: 20px;       
+        font-size: 20px;
     }
     .personal_details .sub-heading_personal,
-    .previous_emp_details .sub-heading_additional_info,
+    .customer--previous--employee .sub-heading_additional_info,
     .references .sub-heading_additional_info {
         font-size: 15px;
     }
@@ -227,7 +229,6 @@ input::-webkit-calendar-picker-indicator {
         box-sizing: border-box;
         padding: 15px;
     }
-
     .personal_details .name_details,
     .personal_details .edu_list,
     .personal_details .address_details
@@ -260,27 +261,21 @@ input::-webkit-calendar-picker-indicator {
         max-width: 100%;
         box-sizing: border-box;
     }
-    .personal_details .hobby_inp {
+    .personal_details .customer--input--field {
         margin-top: 3px;
         width: 100%;
         max-width: 100%;
-        min-width: unset;
         max-height: 20px;
-        min-height: 20px;
         outline: none;
     }
     .phone_number_details {
         flex-direction: column;
     }
-    .phn_num_inp .ph_inp_1 {
+    .customer--phone--number .customer--phone--code {
         width: 100%;
         max-width: 20%;
     }
-    .phn_num_inp .ph_inp_2 {
-        width: 100%;
-        max-width: 100%;
-    }
-    .previous_emp_details .sub-heading_additional_info {
+    .customer--previous--employee .sub-heading_additional_info {
         word-break: break-word;
     }
     .button_class .submit_button {
