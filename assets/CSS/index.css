@@ -1,3 +1,7 @@
+:root {
+    --heading_maroon: #A52A2A;
+    --gray: gray;
+}
 .page_body {
     font-family: sans-serif;
     display: flex;
@@ -22,21 +26,18 @@
     max-width: 30%;
 }
 .name_details .first_name, .name_details .last_name {
-    color: gray;
+    color: var(--gray);
     font-size: 9px; 
 }
-
 .personal_details .sub-heading_personal {
-    color: #800000;
+    color: var(--heading_maroon);
     margin-bottom: 3%;
     font-size: 22px;
 }
-
 .personal_details .email_details {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
 .personal_details .edu_list {
     display: flex;
     gap: 5px;
@@ -61,11 +62,15 @@
     display: flex;
     flex-direction: column;
 }
+.address_input .user_address {
+    display: flex;
+    flex-direction: column;
+}
 .address_details .city_span {
     text-align: center;
 }
 .address_details .muted_text {
-    color: gray;
+    color: var(--gray);
     font-size: 10px;
     text-align: center;
 }
@@ -112,65 +117,57 @@
 }
 
 .personal_details .phone_number_details {
+    display: flex;
     margin-bottom: 15px;
 }
 
-.personal_details .hobby_inp {
+.personal_details .customer--input--field {
     margin-top: 3px;
     width: 100%;
     max-width: 500px;
     max-height: 20px;
     outline: none;
 }
-
-.sub-heading_additional_info {
-    color: #A52A2A;
+.customer--previous--employee .sub-heading_additional_info, .references .sub-heading_additional_info {
+    color: var(--heading_maroon);
     margin-top: 0px;
     font-weight: 500;
     font-size: 22px;
 }
-
-.previous_emp_details .comp_name {
+.customer--previous--employee .comp_name {
     margin-top: 10px;
 }
-.previous_emp_details .emp_detail {
+.customer--previous--employee .customer--employee--detail {
     margin-bottom: 15px;
 }
 .references .ref_details {
     margin-bottom: 15px;
 }
-
 .form_label {
     display: inline-block;
     width: 180px;
 }
-
 .form_input {
     outline: none;
 }
-
-.personal_details, .previous_emp_details, .references {
+.personal_details, .customer--previous--employee, .references {
     border: none;
     padding: 5px;
 }
-
 input::-webkit-calendar-picker-indicator {
       opacity: 100;
 }
-
-.form {
+.page_body .form {
     border-top: 20px solid #800000;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
     width: 100%; 
     max-width: 580px;
     box-sizing: border-box;
 }
-
 .form .button_class {
     display: flex;
     justify-content: center;
- }
-
+}
 .button_class .submit_button {
     background-color: #800000;
     color: #FFFFFF;
@@ -182,17 +179,14 @@ input::-webkit-calendar-picker-indicator {
     max-width: 20%;
     padding: 8px 10px;
 }
-
 .submit_button:hover {
     cursor: pointer;
 }
-
-
 .edu_list .custom_arrow_input, .address_details .custom_arrow_input {
     position: relative;
-  }
+}
   
-  .custom_arrow_input:after {
+.custom_arrow_input:after {
     content: "▼";
     font-size: 8px;
     pointer-events: none;
@@ -200,9 +194,8 @@ input::-webkit-calendar-picker-indicator {
     right: 2px;
     top: 8px;
     z-index: 1;
-  }
-  
-  .custom_arrow_input select {
+}
+.custom_arrow_input select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -210,20 +203,83 @@ input::-webkit-calendar-picker-indicator {
     cursor: pointer;
     outline: none;
     padding: 4px;
-  }
-  
-  .custom_arrow_input select::-ms-expand {
+}
+.custom_arrow_input select::-ms-expand {
     display: none;
-  }
+}
 
 @media (max-width: 767px) {
     .page_body {
         flex-direction: column;
         align-items: center;
+        margin: 10px;
+    }
+    .headings .main-heading {
+        font-size: 20px;
+    }
+    .personal_details .sub-heading_personal,
+    .customer--previous--employee .sub-heading_additional_info,
+    .references .sub-heading_additional_info {
+        font-size: 15px;
+    }
+    .page_body .form {
+        border-top: 20px solid #800000;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    .personal_details .name_details,
+    .personal_details .edu_list,
+    .personal_details .address_details
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .name_details .name_input,
+    .edu_list_input,
+    .country_list,
+    .address_details .address_input,
+    .city_input .city_details,
+    .city_input .state_details,
+    .city_input .zipcode_details {
+        width: 100%;
+        max-width: 100%;
+    }
+    .personal_details .edu_list_input {
+        width: 100%;
+        max-width: 100%;
     }
     .form_label {
-        display: inline-block;
+        display: block;
         width: 100%;
-        max-width: 90px;
+    }
+    .form_input,
+    .resume_inp,
+    .select_label {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .personal_details .customer--input--field {
+        margin-top: 3px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 20px;
+        outline: none;
+    }
+    .phone_number_details {
+        flex-direction: column;
+    }
+    .customer--phone--number .customer--phone--code {
+        width: 100%;
+        max-width: 20%;
+    }
+    .customer--previous--employee .sub-heading_additional_info {
+        word-break: break-word;
+    }
+    .button_class .submit_button {
+        width: 100%;
+        max-width: 40%;
     }
 }
